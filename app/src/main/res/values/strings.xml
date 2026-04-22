@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">LostAndFoundApp</string>
 
-    <!-- These categories are used for advert creation -->
     <string-array name="category_array">
         <item>Electronics</item>
         <item>Pets</item>
@@ -13,7 +12,6 @@
         <item>Other</item>
     </string-array>
 
-    <!-- These values are used to filter the list -->
     <string-array name="filter_array">
         <item>All</item>
         <item>Electronics</item>

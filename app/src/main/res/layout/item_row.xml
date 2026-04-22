@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- This row layout is used by the custom adapter -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="12dp">
 
-    <!-- This shows the main item title -->
     <TextView
         android:id="@+id/tvRowTitle"
         android:layout_width="match_parent"
@@ -16,7 +14,6 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <!-- This shows the subtitle -->
     <TextView
         android:id="@+id/tvRowSubtitle"
         android:layout_width="match_parent"

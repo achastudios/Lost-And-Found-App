@@ -1,12 +1,10 @@
 package com.example.lostandfoundapp;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
@@ -36,6 +34,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         btnRemove = findViewById(R.id.btnRemove);
 
         db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "lost_found_db")
+                .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();
 
@@ -63,9 +62,8 @@ public class ItemDetailActivity extends AppCompatActivity {
         tvCategory.setText(item.category);
         tvTimestamp.setText(item.timestamp);
 
-        if (item.imageUri != null && !item.imageUri.isEmpty()) {
-            ivItemImage.setImageURI(Uri.parse(item.imageUri));
-        }
+        // Do not reopen the saved gallery URI here because it can crash on Google Photos URIs
+        ivItemImage.setImageResource(android.R.drawable.ic_menu_gallery);
 
         btnRemove.setOnClickListener(v -> {
             db.lostFoundDao().delete(item);
