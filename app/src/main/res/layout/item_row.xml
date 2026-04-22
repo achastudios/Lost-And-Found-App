@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This row layout is used by the custom adapter -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- This shows the main item title -->
+    <TextView
+        android:id="@+id/tvRowTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lost Apple AirPods"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- This shows the subtitle -->
+    <TextView
+        android:id="@+id/tvRowSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="At Burwood campus • 2 days ago"
+        android:textSize="14sp" />
+
+</LinearLayout>
